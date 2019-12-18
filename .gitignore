@@ -4,3 +4,4 @@ bin
 lib
 include
 *.mp3
+.DS_Store

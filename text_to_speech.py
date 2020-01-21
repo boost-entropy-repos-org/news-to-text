@@ -21,10 +21,10 @@ def text_to_speech(text, filename):
     response = client.synthesize_speech(synthesis_input, voice, audo_config)
 
     # filename = 'outuput.mp3'
-
-    with open(filename + '.mp3', 'wb') as out:
+    filename = filename + '.mp3'
+    with open(filename, 'wb') as out:
         out.write(response.audio_content)
-        print('written output as output.mp3')
+        print('written output as {filename}')
 
     upload_to_gcp(filename)
 
